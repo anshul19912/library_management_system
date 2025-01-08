@@ -23,6 +23,6 @@ public interface LibraryRepository extends JpaRepository<Book,Long> {
     @Modifying
     @Transactional
     @Query(value = "update LIBRARY_MANAGEMENT_SYSTEM set ALLOCATION_STATUS = 'YES', STUDENT_NAME =:name where ID =:id",nativeQuery = true)
-    public int allocateBook(@Param("id") long id,@Param("name") String studentName);
+    public void allocateBook(@Param("id") long id,@Param("name") String studentName);
 
 }

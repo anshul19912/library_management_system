@@ -45,7 +45,7 @@ public class LibraryService {
     }
 
     public String allocateBook(long id, String studentName){
-        repository.allocateBook(id, studentName);
+         repository.allocateBook(id, studentName);
         return "Book allocated Successfully";
     }
 
